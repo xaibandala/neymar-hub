@@ -4,8 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Play, X, ChevronLeft, ChevronRight } from "lucide-react";
 import neymarSkills from "@/assets/neymar-skills.jpeg";
 import neymarTrophy from "@/assets/neymar-trophy.jpeg";
-import neymarGoals from "@/assets/neymar-goals.mp4";
-import neymarSkillsVideo from "@/assets/neymar-skills.mp4";
 import neymarHero from "@/assets/neymar-hero.jpg";
 import neymarTricks from "@/assets/neymar-tricks.jpeg";
 
@@ -21,7 +19,7 @@ const GallerySection = () => {
     },
     {
       type: "video",
-      src: neymarGoals,
+      src: "https://www.youtube.com/embed/P_ihwXty6Ls",
       title: "Best Goals",
       description: "Top 10 Neymar Goals",
     },
@@ -33,7 +31,7 @@ const GallerySection = () => {
     },
     {
       type: "video",
-      src: neymarSkillsVideo,
+      src: "https://www.youtube.com/embed/OWOjRdmpM6I",
       title: "Skills & Tricks",
       description: "Magic on the field",
     },
@@ -92,7 +90,7 @@ const GallerySection = () => {
                   ) : (
                     <div className="w-full h-full relative">
                       <img
-                        src={item.src === neymarGoals ? neymarHero : neymarTricks}
+                        src={item.src.includes("P_ihwXty6Ls") ? neymarHero : neymarTricks}
                         alt={item.title}
                         className="w-full h-full object-cover"
                       />
